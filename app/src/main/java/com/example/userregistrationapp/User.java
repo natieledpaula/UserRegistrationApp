@@ -1,8 +1,13 @@
 package com.example.userregistrationapp;
 
 
+import androidx.room3.Dao;
 import androidx.room3.Entity;
+import androidx.room3.Insert;
 import androidx.room3.PrimaryKey;
+import androidx.room3.Query;
+
+import java.util.List;
 
 @Entity
 public class User {
@@ -41,5 +46,26 @@ public class User {
     public String getPhone(){return phone;}
 
     //O data access object e o componente que serve para persistencia de dados. Serve para definir as operaçoes que podem sewr feitas no banco dedados com relação a entidade user
-    //Importa as notações do room necessario para definir o sao (data
+    //Importa as notações do room necessario para definir o sao (data Acess Object)
+    import androidx.room3.Dao;
+    import androidx.room3.Insert;
+    import androidx.room3.Query;
+
+    //Importa a classe list do java para retornar uma lista de usuarios
+    import java.util.List;
+
+    @Dao
+    public interface UserDao {
+        //Metodo para inserir um usuario na tabela do BD
+        //A anotação @Insert informa a room que este metodo deve ser usado para inserir dado
+        @Insert
+        void insert(User user);
+
+        //Metodo para buscar todo os usuarios cadastrados no BD
+        //A anotação @Query permite definir uma consulta sql personalizada
+        @Query("SELECT * FROM user")
+        List<User> getAllUsers();
+    }
+
+
 }
