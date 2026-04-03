@@ -39,4 +39,7 @@ public class User {
     public String getEmail(){return email;}
     //Retorna o phone do usuario
     public String getPhone(){return phone;}
+
+    //O data access object e o componente que serve para persistencia de dados. Serve para definir as operaçoes que podem sewr feitas no banco dedados com relação a entidade user
+    //Importa as notações do room necessario para definir o sao (data
 }
