@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    layout_width="match_parent"
-    layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:padding="16dp"
-    android:orientation="vertical">
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/TextViewReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Relatorio de Usuarios"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/brnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="voltar"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:onClick="voltarParaCadastro" />
 
 </LinearLayout>
